@@ -102,12 +102,7 @@ export function HeroSection() {
             </a>
             , {t.hero.companyDescription}
           </p>
-          <p>
-            {t.hero.pastExperience} <span className="font-medium text-foreground">{t.hero.agencies}</span> {t.hero.and}{" "}
-            <span className="font-medium text-foreground">{t.hero.corporations}</span> {t.hero.to}{" "}
-            <span className="font-medium text-foreground">{t.hero.startups}</span> {t.hero.and}{" "}
-            <span className="font-medium text-foreground">{t.hero.studios}</span>
-          </p>
+          {t.hero.pastExperience && <p>{t.hero.pastExperience}</p>}
           <p>{t.hero.personalTime}</p>
         </div>
       </section>
