@@ -79,7 +79,7 @@ export function HeroSection() {
       {/* Mobile Header - shows on small screens */}
       <div className="lg:hidden sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-sm">
         <div className="flex h-14 items-center justify-between px-4 sm:px-6">
-          <span className="text-sm font-semibold">{t.hero.name.split(" ")[0]}</span>
+          <span className="text-sm font-semibold">{t.hero.name?.split(" ")[0] || t.hero.name || "Portfolio"}</span>
           <div className="flex items-center gap-3">
             <LanguageToggle />
             <div className="h-4 w-px bg-border" />
@@ -102,7 +102,7 @@ export function HeroSection() {
             </a>
             , {t.hero.companyDescription}
           </p>
-          {t.hero.pastExperience && <p>{t.hero.pastExperience}</p>}
+          {t.hero.pastExperience && t.hero.pastExperience.trim() && <p>{t.hero.pastExperience}</p>}
           <p>{t.hero.personalTime}</p>
         </div>
       </section>
