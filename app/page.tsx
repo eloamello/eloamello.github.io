@@ -7,12 +7,12 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background flex">
+    <div className="min-h-screen bg-background flex flex-col lg:flex-row">
       {/* Left Column - Fixed Sidebar */}
       <HeroSection />
       
       {/* Right Column - Scrollable Content */}
-      <main className="flex-1 ml-0 lg:ml-[400px] xl:ml-[450px] overflow-y-auto">
+      <main className="flex-1 ml-0 lg:ml-[400px] xl:ml-[450px]">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="py-16 md:py-24 lg:py-32 space-y-16 md:space-y-24">
             <AboutSection />
